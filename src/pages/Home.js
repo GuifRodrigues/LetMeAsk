@@ -36,6 +36,11 @@ export const Home = () => {
             return 
         }
         
+        if(roomRef.val().ended_at ){
+            alert('sala já encerrada!')
+            return
+        }
+        
         history.push(`/rooms/${roomCode}`)
         
         console.log(roomCode);

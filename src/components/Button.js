@@ -1,7 +1,11 @@
 import '../styles/button.scss'
 
-export const Button = (props) => {
+export const Button = ({isOutlined = false, ...props }) => {
     return (
-        <button className='button'{...props}/>
+        <button 
+        className={`button ${isOutlined ? 'outlined' : ''}`}
+        {...props}
+        
+        />
     )
 }
