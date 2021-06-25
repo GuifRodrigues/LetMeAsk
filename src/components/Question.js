@@ -1,7 +1,7 @@
 import '../styles/question.scss'
-export const Question = ({content, author, children}) => {
+export const Question = ({content, author, children, isAnswered = false, isHighlighted = false }) => {
     return (
-        <div className='question'>
+        <div className={`question ${isAnswered ? 'answered' : ''} ${isHighlighted? 'highlighted' : ''}`}>
             <p>{content}</p>
             <footer>
                 <div className='user_info'>
